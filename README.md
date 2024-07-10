@@ -26,7 +26,7 @@ Create task > Actions tab
     powershell.exe
 
     Add arguments:
-    -ExecutionPolicy Bypass -File c:\scripts\botnet-blocklist-firewall-rules-sync.ps1
+    -ExecutionPolicy Bypass "c:\scripts\botnet-blocklist-firewall-rules-sync.ps1"
 
     Start in:
     c:\scripts
