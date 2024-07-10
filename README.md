@@ -2,7 +2,7 @@
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/aosterwyk/botnet-blocklist-firewall-rules)](https://github.com/aosterwyk/botnet-blocklist-firewall-rules/commits/master) [![Discord](https://img.shields.io/discord/90687557523771392?color=000000&label=%20&logo=discord)](https://discord.gg/QNppY7T) 
 
-This script is based off of and idea in [a video on The PC Security Channel](https://www.youtube.com/watch?v=7UWFJGeix_E&list=FLD_a_ArvwQLrUruC8_nw4eQ) to create outbound block rules for known botnet IPs. The script uses the [Spamhaus IPv4 block list](https://www.spamhaus.org/blocklists/do-not-route-or-peer/).
+This script is based off of an idea in [a video on The PC Security Channel](https://www.youtube.com/watch?v=7UWFJGeix_E&list=FLD_a_ArvwQLrUruC8_nw4eQ) to create outbound block rules for known botnet IPs. The script uses the [Spamhaus IPv4 block list](https://www.spamhaus.org/blocklists/do-not-route-or-peer/).
 
 This script will
 - Download the [updated list](https://www.spamhaus.org/drop/drop_v4.json)
