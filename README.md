@@ -18,14 +18,18 @@ You can run this manually or as a [scheduled task](#scheduled-task).
 ### Scheduled Task Settings
 This task needs to be run as an administrator ("Run with highest privileges") to create and modify rules in Windows Firewall.
 
-Create a scheduled task with the settings below. The example assumes the script is in c:\scripts. 
+Create a scheduled task with the settings below. The script is located in c:\scripts in the example.
 
 Create task > Actions tab
-**Program/Script**: powershell.exe
+    
+    Program/Script:
+    powershell.exe
 
-**Add arguments**: `-ExecutionPolicy Bypass -File c:\scripts\botnet-blocklist-firewall-rules-sync.ps1`
+    Add arguments:
+    -ExecutionPolicy Bypass -File c:\scripts\botnet-blocklist-firewall-rules-sync.ps1
 
-**Start in**: c:\scripts
+    Start in:
+    c:\scripts
 
 ## Support
 
