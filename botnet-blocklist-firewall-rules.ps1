@@ -15,7 +15,7 @@ $blockList | ForEach-Object {
     $item = ConvertFrom-Json $_
     $IP = $item.cidr
 
-    if($IP.length -gt 7) { 
+    if($IP.length -gt 6) { 
         write-host "Adding $($IP) to IP list"        
         $IPList += $IP 
     }
