@@ -1,5 +1,8 @@
-# Botnet Blocklist IPs Firewall Rules Sync Script v1.0
+# Botnet Blocklist IPs Firewall Rules Sync Script v1.1
 # https://github.com/aosterwyk/feodo-tracker-blocklist-firewall-rules
+
+$excludedIPs = @()
+# $excludedIPs = @("1.1.1.1", "1.0.0.1")
 
 $blockListURL = "https://www.spamhaus.org/drop/drop_v4.json"
 $result = Invoke-RestMethod $blockListURL
@@ -16,6 +19,10 @@ $blockList | ForEach-Object {
     $IP = $item.cidr
 
     if($IP.length -gt 6) { 
+        if($excludedIPs -contains $IP) {
+            write-host -ForegroundColor Yellow "$($IP) is in excluded list. Skipping."
+            return
+        }
         write-host "Adding $($IP) to IP list"        
         $IPList += $IP 
     }
