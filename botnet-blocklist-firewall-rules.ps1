@@ -1,6 +1,16 @@
 # Botnet Blocklist IPs Firewall Rules Sync Script v1.1
 # https://github.com/aosterwyk/feodo-tracker-blocklist-firewall-rules
 
+param (
+    [switch]$update
+)
+
+if($update) { 
+    Write-Host -ForegroundColor Cyan "Running git pull to check for updates"
+    Start-Process "git" -ArgumentList "pull" -Wait
+    Write-Host -ForegroundColor Green "Done"
+}
+
 $excludedIPs = @()
 # $excludedIPs = @("1.1.1.1", "1.0.0.1")
 
