@@ -39,4 +39,4 @@ $blockList | ForEach-Object {
 }
 
 Write-Host "Creating Windows Firewall rule"
-New-NetFirewallRule -DisplayName "Botnet Blocklist IPs" -Direction Outbound -RemoteAddress $IPList | Out-Null
+New-NetFirewallRule -DisplayName "Botnet Blocklist IPs" -Direction Outbound -RemoteAddress $IPList -Action Block | Out-Null
