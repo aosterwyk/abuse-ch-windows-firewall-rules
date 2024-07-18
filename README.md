@@ -11,7 +11,7 @@ This script will
 
 ## Usage
 
-You can run this manually or as a [scheduled task](#scheduled-task). 
+You can run this manually or as a [scheduled task](#scheduled-task-settings). 
 
 **Note** This script does not verify the JSON. This could be vulnerable if the domain is spoofed. Use this at your own risk on networks that you trust. 
 
