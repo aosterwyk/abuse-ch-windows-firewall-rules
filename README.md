@@ -13,9 +13,9 @@ This script will
 
 You can run this manually or as a [scheduled task](#scheduled-task-settings). 
 
-**Note** This script does not verify the JSON. This could be vulnerable if the domain is spoofed. Use this at your own risk on networks that you trust. 
+**Note** This script does not verify the download list. This could be vulnerable if the domain is spoofed. Use this at your own risk on networks that you trust. 
 
-IPs can be excluded by adding them to the $excludedIPs object. See the commented version below it for a formatting example. 
+IPs can be excluded by adding them to the `$excludedIPs` object. See the commented version below it for a formatting example. 
 
 Run the script with **-update** to run `git pull` before starting the script to keep it updated. You will need to clone this repo and keep the .git directory for this switch to work. 
 
@@ -37,10 +37,6 @@ Add arguments:
 Start in:
 
     c:\scripts
-
-## Support
-
-[Discord server](https://discord.gg/QNppY7T) or DM `VariXx#8317`
 
 ## License
 [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
