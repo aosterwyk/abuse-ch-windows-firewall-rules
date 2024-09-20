@@ -1,4 +1,4 @@
-# Botnet Blocklist IPs Firewall Rules Sync Script v1.1
+# Botnet Blocklist IPs Firewall Rules Sync Script v1.2
 # https://github.com/aosterwyk/feodo-tracker-blocklist-firewall-rules
 
 param (
@@ -15,7 +15,13 @@ $excludedIPs = @()
 # $excludedIPs = @("1.1.1.1", "1.0.0.1")
 
 $blockListURL = "https://www.spamhaus.org/drop/drop_v4.json"
-$result = Invoke-RestMethod $blockListURL
+try {
+    $result = Invoke-RestMethod $blockListURL
+}
+catch {
+    Write-Host -ForegroundColor Red "$($_)`nError downloading list. Exiting."
+    exit
+}
 
 Write-Host "Removing old Botnet Blocklist IPs firewall rules"
 Remove-NetFirewallRule -DisplayName "Botnet Blocklist IPs" -ErrorAction SilentlyContinue 
